@@ -49,7 +49,7 @@ export const Board: React.FC<BoardProps> = ({
   };
 
   return (
-    <div className="board" role="grid" aria-label="マルバツ盤面">
+    <div className="board" aria-label="マルバツ盤面">
       {board.map((cellValue, index) => {
         const isWinning = winningLine !== null && winningLine.includes(index);
         const isDisabled = isGameOver || cellValue !== null || isCpuThinking;

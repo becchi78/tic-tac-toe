@@ -1,7 +1,7 @@
 ---
 id: T-004
 title: スタイリング仕上げと GitHub Pages デプロイ設定の確定
-status: todo
+status: in-progress
 branch: feature/T-004-styling-deploy
 depends_on: [T-003]
 design_refs:

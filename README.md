@@ -67,13 +67,17 @@ tic-tac-toe/
 
 ## デプロイ（GitHub Pages）
 
-`app/vite.config.ts` の `base` をリポジトリ名（`/tic-tac-toe/`）に合わせたうえで:
+`app/vite.config.ts` で `base: './'`（相対パス）が設定されているため、GitHub Pages のサブパス配信に対応しています。
+
+`.github/workflows/deploy.yml` により、`main` ブランチへの push 時に `app/dist` が GitHub Pages へ自動デプロイされます。
+
+手動ビルドを行う場合:
 
 ```sh
 cd app && npm ci && npm run build
 ```
 
-生成された `app/dist` を GitHub Pages（`gh-pages` ブランチや Actions）で配信する。
+生成された `app/dist` を静的ホスティングに配信してください。
 
 ## 開発体制
 
