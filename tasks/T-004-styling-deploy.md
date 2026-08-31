@@ -1,13 +1,13 @@
 ---
 id: T-004
 title: スタイリング仕上げと GitHub Pages デプロイ設定の確定
-status: in-progress
+status: done
 branch: feature/T-004-styling-deploy
 depends_on: [T-003]
 design_refs:
   - docs/design.md
   - docs/requirement.md
-conversation_id: null
+conversation_id: 2452f485-21a0-4486-b218-5d5708e2ddd6
 attempts: 0
 assignee: antigravity
 ---
