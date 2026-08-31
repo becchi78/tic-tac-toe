@@ -1,0 +1,12 @@
+{
+  "name": "claude-agy-orchestrator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "High-Low Mix agent orchestration: Claude Code (orchestrator) delegates implementation/review to Antigravity CLI (agy)",
+  "scripts": {
+    "lint": "npx --yes markdownlint-cli2 \"**/*.md\" \"#node_modules\""
+  },
+  "devDependencies": {
+    "markdownlint-cli2": "^0.23.2"
+  }
+}

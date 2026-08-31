@@ -1,0 +1,4 @@
+node_modules/
+*.log
+.agents/state/last-commands.log
+.DS_Store

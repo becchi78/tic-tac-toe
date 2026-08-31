@@ -1,0 +1,25 @@
+# High-Low Mix: Antigravity 実行パラメータ
+#
+# モデルを変えるときは、このファイルの model だけを編集すればよい。
+#   1. `agy models` で新しい slug を確認（例: gemini-3.7-flash-high）
+#   2. 下の model を書き換える
+#   3. スモークテスト（docs/implementation-design/agent-integration.md 2.4）
+#
+# reasoning レベルは slug 末尾（-high / -medium / -low）に内包される。
+# `agy` の --effort フラグは使わない（slug と食い違うとエラーになるため）。
+#
+# 一時的な上書きは環境変数で:
+#   AGENTMIX_IMPLEMENTER_MODEL / AGENTMIX_IMPLEMENTER_PRINT_TIMEOUT
+#   AGENTMIX_REVIEWER_MODEL    / AGENTMIX_REVIEWER_PRINT_TIMEOUT
+
+[antigravity.implementer]
+model         = "gemini-3.7-flash-high"   # `agy models` の slug（reasoning レベル込み）
+print_timeout = "20m"                      # Go duration 形式
+
+[antigravity.reviewer]
+model         = "gemini-3.7-flash-high"
+print_timeout = "15m"
+
+[defaults]
+max_attempts  = 3          # 同一タスクの最大リトライ回数
+default_branch = "main"    # PR のベース / タスクブランチの分岐元

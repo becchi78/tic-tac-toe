@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(scripts/agy-run.sh:*)",
+      "Bash(agy models)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git status:*)",
+      "Bash(git switch:*)",
+      "Bash(git branch:*)",
+      "Bash(git add:*)",
+      "Bash(npx markdownlint-cli2:*)",
+      "Bash(npm run lint:*)",
+      "Edit(tasks/**)",
+      "Write(tasks/**)",
+      "Write(docs/**)",
+      "Edit(docs/**)"
+    ],
+    "ask": [
+      "Bash(gh pr create:*)",
+      "Bash(gh pr merge:*)",
+      "Bash(git merge:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
+    ],
+    "deny": [
+      "Bash(agy -p:*)",
+      "Bash(agy --print:*)"
+    ]
+  }
+}

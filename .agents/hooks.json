@@ -1,0 +1,28 @@
+{
+  "guard-paths": {
+    "PreToolUse": [
+      {
+        "matcher": "run_command|write_file|edit_file|create_file",
+        "hooks": [
+          { "type": "command", "command": "hooks/guard-paths.sh", "timeout": 10 }
+        ]
+      }
+    ]
+  },
+  "lint-markdown": {
+    "enabled": true,
+    "PostToolUse": [
+      {
+        "matcher": "write_file|edit_file|create_file",
+        "hooks": [
+          { "type": "command", "command": "hooks/lint-markdown.sh", "timeout": 60 }
+        ]
+      }
+    ]
+  },
+  "require-report": {
+    "Stop": [
+      { "type": "command", "command": "hooks/require-report.sh", "timeout": 10 }
+    ]
+  }
+}
