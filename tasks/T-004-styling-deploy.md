@@ -27,6 +27,11 @@ T-003 で機能は揃う。`docs/requirement.md` の非機能要件（レスポ�
 - アクセシビリティ最終確認:
   - すべての操作がキーボードのみで可能。`StatusBar` の `aria-live` で結果が読み上げられる。
   - 各マスの `aria-label` が状態を表す。コントラスト比 4.5:1 以上。
+  - `Board` の `role` とセルの `role` の整合を取る（T-003 レビュー指摘）。
+    盤面を `role="grid"` にするならセルは `role="gridcell"`（ボタンは gridcell の中に入れる）。
+    もしくは盤面の `role` を外してセルを素の `button` にする。既存テストを壊さない範囲で。
+  - `useGame` の CPU thinking フラグ更新で余分な再レンダーが出ている点を軽く整理してよい
+    （T-003 レビュー指摘。状態遷移は変えない。任意）。
 - デプロイ:
   - `app/vite.config.ts` の `base` を確認（相対 `'./'` で GitHub Pages のサブパス配信が可能なこと）。
   - `app/README.md` は作らず、ルート `README.md` の「デプロイ（GitHub Pages）」節が実手順と
