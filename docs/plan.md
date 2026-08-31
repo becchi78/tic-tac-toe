@@ -8,7 +8,7 @@ Claude Code がタスクの状態遷移のたびに更新する。
 
 | ID | 概要 | status | depends_on | ブランチ | 備考 |
 |---|---|---|---|---|---|
-| T-001 | `app/` に Vite + React + TS を scaffold（Vitest / ESLint / Prettier / base 設定） | review | - | feature/T-001-scaffold-vite-react | 実装・レビュー pass。PR 作成待ち（gh 未認証） |
+| T-001 | `app/` に Vite + React + TS を scaffold（Vitest / ESLint / Prettier / base 設定） | merging | - | feature/T-001-scaffold-vite-react | PR #1。レビュー pass、人間承認待ち |
 | T-002 | `src/core/` にゲームロジック純関数 + minimax CPU + Vitest 網羅テスト | todo | T-001 | feature/T-002-game-core-logic | |
 | T-003 | UI 実装（Board/Cell/StatusBar/ModeSelect/ScoreBoard/Controls）+ useGame + CPU 自動着手 | todo | T-002 | feature/T-003-game-ui | |
 | T-004 | スタイリング（レスポンシブ / a11y 仕上げ）+ GitHub Pages デプロイ設定の確定 | todo | T-003 | feature/T-004-styling-deploy | |
@@ -21,6 +21,6 @@ status: todo / in-progress / review / merging / blocked / done
 
 ## 現在の状況
 
-- 進行中: T-001（実装完了・レビュー pass、`feature/T-001-scaffold-vite-react` push 済み）
-- ブロッカー: `gh` CLI 未認証で PR を自動作成できない（人間が `gh auth login` するか PR を手動作成）
-- 次にやること: T-001 の PR 作成 → 人間承認 → マージ → T-002 ディスパッチ
+- 進行中: T-001（PR #1 作成済み・レビュー pass、人間のマージ承認待ち）
+- ブロッカー: なし
+- 次にやること: 人間が PR #1 を承認 → `gh pr merge` → T-002 ディスパッチ

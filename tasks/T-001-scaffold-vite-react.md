@@ -1,7 +1,7 @@
 ---
 id: T-001
 title: app/ に Vite + React + TypeScript プロジェクトを scaffold する
-status: review
+status: merging
 branch: feature/T-001-scaffold-vite-react
 depends_on: []
 design_refs:
