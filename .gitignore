@@ -2,3 +2,6 @@ node_modules/
 *.log
 .agents/state/last-commands.log
 .DS_Store
+app/node_modules/
+app/dist/
+app/coverage/
