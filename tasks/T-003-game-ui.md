@@ -1,13 +1,13 @@
 ---
 id: T-003
 title: ゲーム UI と useGame フック（CPU 自動着手含む）を実装する
-status: todo
+status: done
 branch: feature/T-003-game-ui
 depends_on: [T-002]
 design_refs:
   - docs/design.md
   - docs/requirement.md
-conversation_id: null
+conversation_id: afa794bb-f0a9-4951-b0ac-3fa5ee7f482e
 attempts: 0
 assignee: antigravity
 ---
