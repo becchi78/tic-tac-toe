@@ -9,8 +9,8 @@ Claude Code がタスクの状態遷移のたびに更新する。
 | ID | 概要 | status | depends_on | ブランチ | 備考 |
 |---|---|---|---|---|---|
 | T-001 | `app/` に Vite + React + TS を scaffold（Vitest / ESLint / Prettier / base 設定） | done | - | feature/T-001-scaffold-vite-react | PR #1 squash merge（d9b6ea3） |
-| T-002 | `src/core/` にゲームロジック純関数 + minimax CPU + Vitest 網羅テスト | merging | T-001 | feature/T-002-game-core-logic | PR #2。レビュー pass、人間承認待ち |
-| T-003 | UI 実装（Board/Cell/StatusBar/ModeSelect/ScoreBoard/Controls）+ useGame + CPU 自動着手 | todo | T-002 | feature/T-003-game-ui | |
+| T-002 | `src/core/` にゲームロジック純関数 + minimax CPU + Vitest 網羅テスト | done | T-001 | feature/T-002-game-core-logic | PR #2 squash merge（1b5c1e6） |
+| T-003 | UI 実装（Board/Cell/StatusBar/ModeSelect/ScoreBoard/Controls）+ useGame + CPU 自動着手 | in-progress | T-002 | feature/T-003-game-ui | ディスパッチ中 |
 | T-004 | スタイリング（レスポンシブ / a11y 仕上げ）+ GitHub Pages デプロイ設定の確定 | todo | T-003 | feature/T-004-styling-deploy | |
 
 status: todo / in-progress / review / merging / blocked / done
@@ -21,6 +21,7 @@ status: todo / in-progress / review / merging / blocked / done
 
 ## 現在の状況
 
-- 進行中: T-002（PR #2 作成済み・レビュー pass、人間のマージ承認待ち）
+- 進行中: T-003（UI + useGame を `agy` にディスパッチ）
 - ブロッカー: なし
-- 次にやること: PR #2 承認 → マージ → T-003（UI + useGame）ディスパッチ
+- 次にやること: T-003 実装 → レビュー → pass なら自動マージ（人間一任）→ T-004
+- 運用メモ: T-003 / T-004 は「レビュー pass なら人間承認なしでマージ」を人間から一任済み
