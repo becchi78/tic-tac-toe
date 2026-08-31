@@ -1,13 +1,13 @@
 ---
 id: T-002
 title: src/core/ にゲームロジック純関数と minimax CPU を実装する
-status: todo
+status: merging
 branch: feature/T-002-game-core-logic
 depends_on: [T-001]
 design_refs:
   - docs/design.md
   - docs/requirement.md
-conversation_id: null
+conversation_id: cfc2eb50-1e2b-49ca-9e37-e7a88579971e
 attempts: 0
 assignee: antigravity
 ---
