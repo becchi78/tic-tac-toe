@@ -1,14 +1,14 @@
 ---
 id: T-001
 title: app/ に Vite + React + TypeScript プロジェクトを scaffold する
-status: todo
+status: review
 branch: feature/T-001-scaffold-vite-react
 depends_on: []
 design_refs:
   - docs/design.md
   - docs/requirement.md
   - CONTRIBUTING.md
-conversation_id: null
+conversation_id: 2cc9cbd2-5ef9-4607-a341-2abffaead987
 attempts: 0
 assignee: antigravity
 ---
